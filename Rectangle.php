@@ -26,10 +26,9 @@ class Rectangle extends Shape implements Resizeable
     public function calculatePerimeter(){
         return ($this->height + $this->width) * 2;
     }
-    public function resize($objShape)
+    public function resize($objShape,$resize)
     {
-       $objShape->width = $objShape->width * rand(1,100);
-       $objShape->height = $objShape->height * rand(1,100);
-       return 'S: '.$objShape->calculateArea().'<br>P: '.$objShape->calculatePerimeter();
+       $objShape->width = $objShape->width * $resize;
+       $objShape->height = $objShape->height * $resize;
     }
 }
