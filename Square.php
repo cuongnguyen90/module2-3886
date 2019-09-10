@@ -13,8 +13,9 @@ class Square extends Rectangle implements Resizeable
     {
         parent::__construct($name, $width, $width);
     }
-    public function resize($objShape,$resize)
+    public function resize($objShape,$percent)
     {
-      $objShape->width = $objShape->width*$resize;
+       $resize = $percent/100;
+       $objShape->width = $objShape->width*$resize + $objShape->width;
     }
 }

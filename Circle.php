@@ -24,9 +24,10 @@ class Circle extends Shape implements Resizeable
     public function calculatePerimeter(){
         return pi() * $this->radius * 2;
     }
-    public function resize($objShape,$resize)
+    public function resize($objShape,$percent)
     {
-       $objShape->radius = $objShape->radius * $resize;
+       $resize = $percent /100;
+       $objShape->radius = $objShape->radius * $resize + $objShape->radius;
 
     }
 }

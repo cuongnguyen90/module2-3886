@@ -3,5 +3,5 @@
 
 interface Resizeable
 {
-   public function resize($objShape,$resize);
+   public function resize($objShape,$percent);
 }
